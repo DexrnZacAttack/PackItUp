@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Company>Dexrn ZacAttack</Company>
+        <AssemblyVersion>0.0.1</AssemblyVersion>
+        <FileVersion>0.0.1</FileVersion>
+        <RepositoryUrl>https://codeberg.org/Dexrn/PackItUp</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Nett" Version="0.15.0" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
+      <PackageReference Include="Serilog.Sinks.File" Version="8.0.0-dev-02318" />
+      <PackageReference Include="Serilog.Sinks.SpectreConsole" Version="0.3.3" />
+      <PackageReference Include="SmartFormat" Version="3.6.1" />
+      <PackageReference Include="Spectre.Console.Cli" Version="1.0.0-alpha.0.12" />
+      <PackageReference Include="System.CommandLine" Version="2.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Modrinth.Net\src\Modrinth.Net\Modrinth.Net.csproj" />
+    </ItemGroup>
+
+</Project>
