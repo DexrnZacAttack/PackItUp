@@ -6,8 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Company>Dexrn ZacAttack</Company>
-        <AssemblyVersion>0.0.1</AssemblyVersion>
-        <FileVersion>0.0.1</FileVersion>
+        <AssemblyVersion>0.0.2</AssemblyVersion>
+        <FileVersion>0.0.2</FileVersion>
         <RepositoryUrl>https://codeberg.org/Dexrn/PackItUp</RepositoryUrl>
     </PropertyGroup>
 
@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Modrinth.Net\src\Modrinth.Net\Modrinth.Net.csproj" />
+      <ProjectReference Include="..\Modrinth.Net\src\Modrinth.Net\Modrinth.Net.csproj" />
     </ItemGroup>
 
 </Project>

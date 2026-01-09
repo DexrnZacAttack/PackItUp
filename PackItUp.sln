@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackItUp", "PackItUp\PackItUp.csproj", "{7979831E-2A35-4671-AFFF-15D528369A37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modrinth.Net", "..\Modrinth.Net\src\Modrinth.Net\Modrinth.Net.csproj", "{CEBA7CD7-4FDE-44AC-B228-06FD1A60A56F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modrinth.Net", "Modrinth.Net\src\Modrinth.Net\Modrinth.Net.csproj", "{3EAD6159-AD43-485F-8543-88FC30A37BE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{7979831E-2A35-4671-AFFF-15D528369A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7979831E-2A35-4671-AFFF-15D528369A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7979831E-2A35-4671-AFFF-15D528369A37}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CEBA7CD7-4FDE-44AC-B228-06FD1A60A56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CEBA7CD7-4FDE-44AC-B228-06FD1A60A56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CEBA7CD7-4FDE-44AC-B228-06FD1A60A56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CEBA7CD7-4FDE-44AC-B228-06FD1A60A56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAD6159-AD43-485F-8543-88FC30A37BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAD6159-AD43-485F-8543-88FC30A37BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAD6159-AD43-485F-8543-88FC30A37BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAD6159-AD43-485F-8543-88FC30A37BE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

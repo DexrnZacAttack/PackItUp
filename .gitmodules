@@ -1,0 +1,3 @@
+[submodule "Modrinth.Net"]
+	path = Modrinth.Net
+	url = https://github.com/DexrnZacAttack/Modrinth.Net
