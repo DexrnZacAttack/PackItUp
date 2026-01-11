@@ -15,7 +15,7 @@ namespace PackItUp;
 // TODO on a real note this should be cleaned up before full release, but for now we prototype the functionality.
 internal class PackItUp {
 	public static PackItUp Instance = null!;
-	private readonly string RootDir;
+	public readonly string RootDir;
 	private readonly string ConfigPath;
 
     public readonly PackItUpCommandLineConfig CommandLineConfig;

@@ -6,8 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Company>Dexrn ZacAttack</Company>
-        <AssemblyVersion>0.0.2</AssemblyVersion>
-        <FileVersion>0.0.2</FileVersion>
+        <AssemblyVersion>0.0.3</AssemblyVersion>
+        <FileVersion>0.0.3</FileVersion>
         <RepositoryUrl>https://codeberg.org/Dexrn/PackItUp</RepositoryUrl>
     </PropertyGroup>
 

@@ -36,21 +36,6 @@ public class PackwizPackManager
 
         string exportsDir = Path.Combine(PackItUpLocalDirectory, "Exports");
 
-        string d = Path.GetRelativePath(ModpackDirectory, PackItUpLocalDirectory);
-        string pwi = Path.Combine(ModpackDirectory, ".packwizignore");
-
-        if (!File.Exists(pwi) || !File.ReadLines(pwi).Any(l => l == d))
-        {
-            await using (FileStream fs = new(pwi, FileMode.OpenOrCreate))
-            {
-                fs.Seek(0, SeekOrigin.End);
-
-                // learned this the hard way when it filled my drive
-                ReadOnlySpan<byte> ln = Encoding.UTF8.GetBytes(Environment.NewLine + d);
-                fs.Write(ln);
-            }
-        }
-
         if (!Directory.Exists(exportsDir))
         {
             Directory.CreateDirectory(exportsDir);

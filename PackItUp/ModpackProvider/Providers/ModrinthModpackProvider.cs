@@ -14,6 +14,7 @@ using PackItUp.Types;
 using Serilog;
 using Serilog.Core;
 using File = System.IO.File;
+using StringExtensions = PackItUp.Extensions.StringExtensions;
 using Version = Modrinth.Models.Version;
 
 namespace PackItUp.ModpackProvider.Providers;
@@ -42,6 +43,8 @@ public class ModrinthModpackProvider : ModpackProvider
     /// <inheritdoc />
     public override async Task<bool> InitializeAsync()
     {
+        await InitializeFoldersAsync();
+
         foreach (string packFolder in this.PackFolders)
         {
             string path = Path.Combine(packFolder, "pack.toml");
@@ -133,10 +136,12 @@ public class ModrinthModpackProvider : ModpackProvider
 
             Logger.Information("Uploading version {VersionNumber} with title {VersionName}", versionNumber, versionName);
 
+            bool exit = false;
+
             // TODO this is VERY messy, we need to do something about this.
             // I was thinking about using SpectreConsole.CLI but I had a bad experience with integrating SpectreConsole into here while using Serilog.
             string? changelogPath = Path.Combine(exp.pack.PackItUpLocalDirectory, "Changelogs", $"{versionNumber}.md");
-            while (changelogPath == null || !File.Exists(changelogPath)) {
+            while (!exit && (changelogPath == null || !File.Exists(changelogPath))) {
                 Logger.Warning("No changelog has been created for this version (expected at path {ChangelogPath})", changelogPath);
                 Logger.Information("Options:\n - Skip uploading this version (s)\n - Rescan for the changelog (r)\n - Continue with no changelog (c)");
                 Logger.Information("Choose an option (s/r/c): ");
@@ -150,18 +155,21 @@ public class ModrinthModpackProvider : ModpackProvider
                 switch(input) {
                     case "s": return;
                     case "r": continue;
-                    case "c": changelogPath = null; break;
+                    case "c": changelogPath = null;
+                        exit = true; break;
                     default:
                         Logger.Error("Invalid option, please try again.");
                         break;
                 }
             }
 
-            string changelog = changelogPath != null && File.Exists(changelogPath) ? File.ReadAllText(changelogPath) : "";
+            string changelog = changelogPath != null && File.Exists(changelogPath)
+                                   ? await File.ReadAllTextAsync(changelogPath)
+                                   : "";
+
             Version v = await _client.Version.CreateAsync(Id, [f], f.FileName, versionName, versionNumber,
                                                           changelog, [], [exp.pack.Manifest.Versions.MinecraftVersion], (exp.pack.Manifest.PackItUp?.Stage ?? PackStage.Release).GetModrinth(), loaders,
                                               false, VersionStatus.Listed, null);
         }
-
     }
 }
