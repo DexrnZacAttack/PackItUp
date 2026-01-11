@@ -9,8 +9,8 @@ Utility to streamline uploading Packwiz-powered modpack versions to supported mo
 > Docs will be made when 1.0.0 is released, and accessible at [this webpage](https://packitup.dexrn.me).
 
 ### Users
- - [Re-Console](https://modrinth.com/modpack/legacy-minecraft) (upcoming)
- - [Simply Legacy](https://modrinth.com/modpack/simply-legacy) (upcoming)
+ - [Re-Console](https://modrinth.com/modpack/legacy-minecraft)
+ - [Simply Legacy](https://modrinth.com/modpack/simply-legacy)
  - [Rekindled Legacy](https://modrinth.com/modpack/rekindled-legacy) (upcoming)
 
 Feel free to submit your modpack in PRs
